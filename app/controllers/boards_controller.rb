@@ -1,6 +1,10 @@
 class BoardsController < ApplicationController
     def index
-        @boards = Board.first
+        @boards = Board.all
+    end
+
+    def show
+      Board.find(params[:id])
     end
 
     def new
@@ -8,11 +12,11 @@ class BoardsController < ApplicationController
     end
 
     def create
-      @board = Board.new(board.params)
+      @board = Board.new(board_params)
       if @board.save
         redirect_to board_path(@board)
       else
-        render :new, notice:
+        render :new
       end
     end
 

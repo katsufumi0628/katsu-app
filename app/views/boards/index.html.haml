@@ -1,2 +1,8 @@
 .container
-  %h2 All Board
+  - @boards.each do |board|
+    = board.content
+    = link_to new_board_path do
+      .float_btn
+        %i.fa.fa-plus
+
+  
