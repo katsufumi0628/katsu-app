@@ -1,6 +1,7 @@
 @import 'form';
 @import 'button';
 @import 'header';
+@import 'board';
 
 html {
     word-spacing: 1px;
@@ -24,3 +25,25 @@ body {
     padding: 16px 16px;
     width: 100%;
   }
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.font {
+    height: 25px;
+    left: 0%;
+    right: 76.79%;
+    top: calc(50% - 25px/2 - 12.5px);
+
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+
+    color: #000000;
+}

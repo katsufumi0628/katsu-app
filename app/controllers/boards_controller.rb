@@ -4,15 +4,15 @@ class BoardsController < ApplicationController
     end
 
     def show
-      Board.find(params[:id])
+      @board = Board.find(params[:id])
     end
 
     def new
-      @board = Board.new
+      @board = current_user.boards.build
     end
 
     def create
-      @board = Board.new(board_params)
+      @board = current_user.boards.build(board_params)
       if @board.save
         redirect_to board_path(@board)
       else
