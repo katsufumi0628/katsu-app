@@ -2,7 +2,7 @@
   %h1 All Board
   - @boards.each do |board|
     = link_to board_path(board) do
-      .board_area
+      .board
         %div
           %h4= board.titlename
           %p= board.content

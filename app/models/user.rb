@@ -5,4 +5,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :boards, dependent: :destroy
+
+  def display_name
+    self.email.split('@').first
+  end
+
+  def author_name
+    user.display_name
+  end
+
 end
