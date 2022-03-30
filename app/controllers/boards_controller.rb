@@ -5,10 +5,12 @@ class BoardsController < ApplicationController
 
     def show
       @board = Board.find(params[:id])
+      @tasks = @board.tasks
     end
 
     def new
       @board = current_user.boards.build
+      @tasks = @board.tasks
     end
 
     def create
