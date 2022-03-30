@@ -6,7 +6,9 @@
         %div
           %h4= board.titlename
           %p= board.content
-        %p
+          .board_detail
+          = image_tag 'default-avatar.png', class: 'header_avatar'
+
   = link_to new_board_path do
     .float_btn
       %p + Add new board
