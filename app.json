@@ -1,0 +1,16 @@
+{
+    "name": "katsu app",
+    "description": "This is katsuapp",
+    "keywords": [],
+    "website": "",
+    "repository": "https://github.com/katsu-app/blogapp",
+    "env": {},
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ],
+    "buildpacks": [{
+      "url": "heroku/nodejs"
+    }, {
+      "url": "heroku/ruby"
+    }]
+  }
