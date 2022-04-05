@@ -10,7 +10,7 @@ class TasksController < ApplicationController
     def show
         @board = Board.find(params[:board_id])
         @tasks = @board.tasks
-      end
+    end
 
     def create
         board = Board.find(params[:board_id])
@@ -25,7 +25,7 @@ class TasksController < ApplicationController
 
     private
     def task_params
-        params.require(:task).permit(:title, :content)
+        params.require(:task).permit(:title, :content, :eyecatch)
     end
 
 end
